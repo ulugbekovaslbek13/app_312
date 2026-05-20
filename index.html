@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hikmatli So'zlar</title>
+    <style>
+      body {
+        background: #e0f2fe;
+        font-family: "Georgia", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .quote-box {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        font-size: 1.3rem;
+        color: #0369a1;
+        font-style: italic;
+      }
+      button {
+        background: #0284c7;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-box">
+      <p id="quote">"Bilim qaytarish bilan mustahkamlanadi."</p>
+      <button onclick="getQuote()">Yangi iqtibos</button>
+    </div>
+
+    <script>
+      const quotes = [
+        '"Muvaffaqiyat — bu har kuni takrorlanadigan kichik harakatlar yig\'indisidir."',
+        "\"Eng yaxshi investitsiya — bu o'zingizga bo'lgan investitsiyadir.\"",
+        '"Eshikni taqillatishdan to\'xtamang, bir kun u albatta ochiladi."',
+        "\"Katta ishlarni boshlash uchun buyuk bo'lish shart emas, buyuk bo'lish uchun boshlash shart.\"",
+      ];
+      function getQuote() {
+        const rand = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").textContent = quotes[rand];
+      }
+    </script>
+  </body>
+</html>
